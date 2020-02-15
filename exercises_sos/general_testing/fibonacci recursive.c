@@ -6,7 +6,7 @@ int main()
 {
     int n, i, k;
 
-    printf("Dose to plithos ton arithmon Fibonacci\n");
+    printf("Δωσε το πληθος των αριθμων\n"); //Μπορειτε να διαβασετε τουσ ελληνικους χαρακηρες;(<--mporeite na diabasete toys ellhnikoyus xarkthres?)
     scanf("%d", &n);
     printf("\n\nEmfanisi seiras arithmon Fibonacci\n");
 

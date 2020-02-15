@@ -1,6 +1,15 @@
 #include <stdio.h>
 #define n 3
 
+int absolute(int x) 
+{ 
+    if (x > 0) 
+      return x; 
+    else
+      return -x; 
+} 
+
+
 int main()
 {
 
@@ -25,7 +34,7 @@ int main()
 
     for (i = 0; i <= n-1; i++)
     {
-        if (pin_a[i] >= pin_b[i])
+        if (absolute(pin_a[i]) >= absolute(pin_b[i]))
         {
             pin_c[i] = pin_b[i];
         }
@@ -45,4 +54,7 @@ int main()
 
 
 
-
+///(pin_a[i] >= pin_b[i])
+//5,1,3
+//6,-2,7
+//5,1,3

@@ -1,12 +1,12 @@
 #include <stdio.h>
 int main()
 {
-    int pin[3][3] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int pin[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     // int i = 0;
     // int j = 0;
     int *a_ptr;
 
-    a_ptr = pin;
+    a_ptr = *pin;
 
     // int numArray[5] = {1, 2, 3, 4, 5};
     // int *pint;
