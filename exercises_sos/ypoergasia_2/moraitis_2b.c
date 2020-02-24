@@ -23,7 +23,7 @@ int main()
 
 	while (true)
 	{
-		printf("Dose ton 1o dipsifio arithmo : ");
+		printf("Δώστε τον 1ο διψήφιο αριθμό : ");
 		scanf("%d", &a);
 		if ((a >= 10) && (a <= 99))
 		{
@@ -37,7 +37,7 @@ int main()
 
 	while (true)
 	{
-		printf("Dose ton 2o dipsifio arithmo : ");
+		printf("Δώστε τον 2ο διψήφιο αριθμό : ");
 		scanf("%d", &b);
 		if ((b >= 10) && (b <= 99))
 		{
@@ -51,7 +51,7 @@ int main()
 
 	while (true)
 	{
-		printf("Dose ton 3o dipsifio arithmo : ");
+		printf("Δώστε τον 3ο διψήφιο αριθμό : ");
 		scanf("%d", &c);
 		if ((c >= 10) && (c <= 99))
 		{
@@ -63,53 +63,28 @@ int main()
 		};
 	}
 
-
-	head->data = d; // assign data in first node
+	/* Εισαγώγη δεδομενων στους κομβους */
+	head->data = d; 
 	head->next = second;
 
 	second->data = e;
 	second->next = third;
 
-	third->data = f; // assign data to third node
+	third->data = f; 
 	third->next = NULL;
 
-	/* Print list elements */
+	/* Εκτυπωση */
 	for (head = head; head; head = head->next)
 	{
-		printf("Node  : %d\n", head->data);
+		printf("Κόμβος  : %d\n", head->data);
 		result *= head->data;
 	}
 
-	printf("Ginomeno komvwn : %lu\n", result);
+	printf("Γινόμενο κόμβων : %lu\n", result);
 	return 0;
 };
 
-// #include <stdlib.h>
-// #include <stdio.h>
 
-// /* List of integers */
-// struct s_list {
-// 	int val;		/* Integer value */
-// 	struct s_list *next;
-// };
 
-// int main()
-// {
-// 	struct s_list *head, *p;
-// 	int n;
 
-// 	head = NULL;
-// 	/* Read list elements */
-// 	while (scanf("%d", &n) == 1) {
-// 		p = (struct s_list *)malloc(sizeof(struct s_list));
-// 		p->val = n;
-// 		p->next = head;
-// 		head = p;
-// 	}
-
-// 	printf("\nStarting output:\n"); <-----
-// 	/* Print list elements */      
-// 	for (p = head; p; p = p->next)  <------
-// 		printf("%d\n", p->val);     <-------
-// }
 

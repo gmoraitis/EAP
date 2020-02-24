@@ -4,9 +4,9 @@
 
 int i;
 int y = 0;
-int temp = 0; //temporaly for word output convertion.
-double temp_div = 0; //temporaly for the division of (x - x_old) 
-double temp_apol = 0; //temporaly for the output of abs().
+int temp = 0; 
+double temp_div = 0; 
+double temp_apol = 0; 
 double temp_apol_sf = 0;
 double result_apol_sf = 0;
 double x = 0;
@@ -94,9 +94,9 @@ int main()
             }
 
             // if (y == 11)
-            //     printf("enetka ");
+            //     printf("έντεκα ");
             // else if (y == 12)
-            //     printf("dwdeka ");
+            //     printf("δώδεκα ");
 
             temp %= 10; /* μονάδες*/
 
@@ -140,18 +140,18 @@ int main()
             {
                 x = ( x_old + (y / x_old) ) / 2 ;
                 temp_div = x_old - x;
+
                 printf("\n%f με απολυτο σφαλμα : %f", x,temp_div);
-                //printf("\n%f debug --> temp_div  :", temp_div);//debug
+
                 temp_apol = fabs(temp_div);
-                //printf("\n%f debug --> temp_apol  :", temp_apol);//debug
-                x_old = x;//h prohgoymenh proseggisi x
+                x_old = x;
 
             } while (temp_apol > g);
             printf("\nΗ τελική προσέγγιση είναι : %f",x);
         }
         else{
             printf("\nΈξοδος λόγω μη θετικής τιμής\n");
-        } //end of if
+        } 
 
         
 
