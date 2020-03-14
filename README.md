@@ -1,4 +1,4 @@
-## Compile and run script.
+## Compile and run C file.
 ------
 
 In terminal type : 
