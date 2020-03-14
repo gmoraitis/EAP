@@ -48,6 +48,7 @@ void epeksergasia_eisodou(int eisodos, int thesi)
         }
         else
         {
+            
         }
     }
 }
@@ -77,14 +78,15 @@ int main()
         count += 1;
         if (isdigit(input))
         {
-
-            epeksergasia_eisodou(input - 48 , ((count - 1) * 4));
+            //if(((input - 48)  >= 48) || ((input - 48)  <= 57) ){  Προσπαθεια αποφυγης αλλων χαρκτηρων αλλα δεν δουλευει.
+            epeksergasia_eisodou(input - 48  , ((count - 1) * 4));
 
             temp = temp + 4;
    
         }
         else
         {
+            
             switch (input)
             {
 
@@ -97,6 +99,7 @@ int main()
             case 'F':
                 epeksergasia_eisodou(input - 58, ((count - 1) * 4));
                 break;
+                
             }
         }
     }
