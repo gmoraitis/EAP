@@ -1,5 +1,4 @@
-**/.DS_Store
-**/.vscode
-**/.DS_Store
-**/.dist
-**/.eap.code-workspace
+.DS_Store
+.vscode
+.dist
+*.code-workspace
