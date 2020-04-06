@@ -158,7 +158,6 @@ int countEdges(struct Graph *graph, int nodeNumber)
         node *edge = graph->array[nodeNumber].head;
         while (edge)
         {
-
             edge = edge->next;
             counter += 1;   
         }
@@ -178,10 +177,21 @@ int countEdges(struct Graph *graph, int nodeNumber)
 /* συνάρτηση που υπολογίζει το συνολικό πλήθος των ακμών  (ερώτημα Ε) */
 int counttotalEdges(struct Graph *graph)
 {
+    int result = 0;
     /* 
     (Ε) Να κατασκευάσετε τη συνάρτηση counttotalEdges που υπολογίζει 
     και επιστρέφει το συνολικό πλήθος των ακμών του γράφου.
     */
+      
+        
+        
+            
+            result = (graph->Nodes * (graph->Nodes - 1)) / 2;    
+        
+
+    
+    
+    return result ;
 }
 
 /* Κυρίως πρόγραμμα, menu  */
