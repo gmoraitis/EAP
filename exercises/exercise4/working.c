@@ -177,21 +177,17 @@ int countEdges(struct Graph *graph, int nodeNumber)
 /* συνάρτηση που υπολογίζει το συνολικό πλήθος των ακμών  (ερώτημα Ε) */
 int counttotalEdges(struct Graph *graph)
 {
-    int result = 0;
-    /* 
-    (Ε) Να κατασκευάσετε τη συνάρτηση counttotalEdges που υπολογίζει 
-    και επιστρέφει το συνολικό πλήθος των ακμών του γράφου.
-    */
-      
-        
-        
-            
-            result = (graph->Nodes * (graph->Nodes - 1)) / 2;    
-        
+    int ed = 0; /*Mεταβλητη που κρατα τον αριθμο των κομβων*/
+    int counter = 0; /*Mετρητης*/
 
-    
-    
-    return result ;
+
+      
+        for(int ed = 0; ed < graph->Nodes; ed++ )
+        {
+            counter += countEdges(graph,ed);
+        }
+
+    return counter / 2;
 }
 
 /* Κυρίως πρόγραμμα, menu  */

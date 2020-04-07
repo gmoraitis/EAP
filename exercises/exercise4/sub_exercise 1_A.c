@@ -135,7 +135,7 @@ void printPascalsTriangle(int pin[][N], int arxi, int telos)
 int searchingCoefficient(int pin[][N], int maxrow, int coef, int pinFound[])
 {
     int row, col;
-    int x = 0;
+    //int x = 0;
 
     /*  */////////// rowX return 1,0??
     printf("Ο συντελεστής %d βρέθηκε στην γραμμή (-ές) : ", coef);
@@ -150,12 +150,14 @@ int searchingCoefficient(int pin[][N], int maxrow, int coef, int pinFound[])
             { 
                 pinFound[row] = row;
                 printf("%d ", pinFound[row]);
+                return 1;
             }
+            
+            
         }
     }
     printf("\n");
-    x = 1;
-    return x;
+    return 0;
 }
 
 
