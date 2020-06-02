@@ -5,7 +5,7 @@ int main()
 {
     int Table[N + 1];
 
-    int i, j, k, h, l; 
+    int i, j, k, h, l;
 
     Table[0] = 1;
     for (l = 1; l < N + 1; l++)
@@ -13,18 +13,16 @@ int main()
         Table[l] = 0;
     }
 
-
     for (i = 0; i < N; i++)
     {
         for (j = 0; j < N; j++)
         {
-            for(h = 0; h < N; h++)
+            for (h = 0; h < N; h++)
             {
                 //Table[N - h] = Table[N - j] + Table[N - j - 1] + Table[N - h - 1] ;
-                
+
                 Table[N - h] = Table[N - j] + Table[N - j - h - 1];
             }
-            
         }
         /* Τύπωμα βήματος - Αρχή*/
         // printf("\n");

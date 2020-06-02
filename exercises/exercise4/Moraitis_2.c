@@ -35,10 +35,8 @@ struct Graph *createGraph(int Nodes)
         (struct Graph *)malloc(sizeof(struct Graph));
     graph->Nodes = Nodes;
 
-
     graph->array =
         (struct AdjList *)malloc(Nodes * sizeof(struct AdjList));
-
 
     int i;
     for (i = 0; i < Nodes; ++i)
@@ -118,7 +116,8 @@ void printGraph(struct Graph *graph)
     for (k = 0; k < graph->Nodes; k++)
     {
         struct AdjListNode *p = graph->array[k].head;
-        if(p != NULL){
+        if (p != NULL)
+        {
             printf("\n Ο κόμβος %d συνδέεται με : ", k);
             while (p)
             {
@@ -128,10 +127,9 @@ void printGraph(struct Graph *graph)
         }
         else
             printf("\n Ο κόμβος %d είναι χωρίς συνδέσεις ", k);
-        
     }
 }
-////////////////////////////////////////////////////////////////////////////////
+
 /* συνάρτηση που αθροίζει το πλήθος των συνδέσεων ενος κόμβου (ερώτημα Δ)  */
 int countEdges(struct Graph *graph, int nodeNumber)
 {
@@ -141,48 +139,30 @@ int countEdges(struct Graph *graph, int nodeNumber)
     το πλήθος των συνδέσεων ενός κόμβου (επιλογή 3 του χρήστη)
     Η συνάρτηση επιστρέφει το πλήθος των συνδέσεων του κόμβου NodeNumber
     */
-    int sum = 0;
+    int counter = 0;
 
-    /*Mεθοδος 1*/
-    // for (int i = 0; i < graph->Nodes; i++){
-    //     sum += sizeof(graph->array[i]);
-    // }
-    /*Τελος 1*/
-
-    /*Μεθοδος 2*/
-    int i;
-    int ar[10];
-    for (i = 0; i < graph->Nodes; i++)
+    node *edge = graph->array[nodeNumber].head;
+    while (edge)
     {
-        struct AdjListNode *p = graph->array[i].head;
-        while (p)
-        {   /*Μεθοδος 3*/
-            //sum += 1;
-            //sum += p->dest;
-            //return sum /2; εξω απο την επαναληψη
-            /*Μεθοδος 3*/
-            ar[i] = p->dest;
-            
-            printf("\n to p einai :  %d  ",ar[i]);
-            
-            sum = sizeof *ar;
-
-            p = p->next;
-            printf("\n to sum einai :  %d  ",sum);  
-        }
+        edge = edge->next;
+        counter += 1;
     }
-    return sum / 2 ; 
-    /*Τελος 2*/
+
+    return counter;
 }
-///////////////////////////////////////////////////////////////////////////////
 
 /* συνάρτηση που υπολογίζει το συνολικό πλήθος των ακμών  (ερώτημα Ε) */
 int counttotalEdges(struct Graph *graph)
 {
-    /* 
-    (Ε) Να κατασκευάσετε τη συνάρτηση counttotalEdges που υπολογίζει 
-    και επιστρέφει το συνολικό πλήθος των ακμών του γράφου.
-    */
+    //int ed = 0; /*Mεταβλητη που κρατα τον αριθμο των κομβων*/
+    int counter = 0; /*Mετρητης*/
+
+    for (int ed = 0; ed < graph->Nodes; ed++)
+    {
+        counter += countEdges(graph, ed);
+    }
+
+    return counter / 2;
 }
 
 /* Κυρίως πρόγραμμα, menu  */

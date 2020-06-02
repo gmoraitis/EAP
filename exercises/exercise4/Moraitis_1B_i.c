@@ -5,14 +5,13 @@ int main()
 {
     int Table[N + 1];
 
-    int i, j, k, l; 
+    int i, j, k, l;
 
     Table[0] = 1;
     for (l = 1; l < N + 1; l++)
     {
         Table[l] = 0;
     }
-
 
     for (i = 0; i < N; i++)
     {
