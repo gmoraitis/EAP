@@ -17,17 +17,17 @@
 /* Eisagvgh arithmoy mhna */
 
 #include <stdio.h>
-int n;
+int i = 20;
 int main()
 {
 
     do
     {
-        printf("Dwse arithmo mhna :");
-        scanf("%d", &n);
-    } while ((n > 12) || (n < 1));
+        printf("%d\n",i);
+        i--;
+    } while (i >=0);
 
-    printf("O mhnas poy dwsate einai %d :", n);
+    printf("O End of program");
 }
 
 
